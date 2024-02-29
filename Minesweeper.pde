@@ -36,8 +36,10 @@ public void setMines()
 public void draw ()
 {
     background( 0 );
-    if(isWon() == true)
+    if(isWon() == true){
         displayWinningMessage();
+        stop();
+    }
 }
 public boolean isWon()
 {
@@ -72,6 +74,7 @@ public void displayLosingMessage()
     buttons[NUM_ROWS/2][NUM_COLS/2+1].setLabel("E");
     buttons[NUM_ROWS/2][NUM_COLS/2+2].setLabel("I");
     buttons[NUM_ROWS/2][NUM_COLS/2+3].setLabel("N");    
+    stop();
 }
 public void displayWinningMessage()
 {
